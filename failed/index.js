@@ -35,7 +35,7 @@ function shell() {
         process.exit(0);
       }
       process.stdin.on("keypress", (str, key) => {
-        if (key && key.ctrl && key.name == "c") process.exit();
+        if (key && key.ctrl && key.name == "e") child.exit();
       });
       process.on("SIGINT", on_exit);
       process.on("exit", on_exit);
